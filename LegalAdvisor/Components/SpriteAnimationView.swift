@@ -4,11 +4,11 @@ struct SpriteAnimationView: View {
     let columns: Int
     let rows: Int
     let frameCount: Int
-    let framesPerSecond: Double
+    let frameDuration: Double
 
     @State private var currentFrame: Int = 0
+    @State private var timer: Timer?
 
-    private let timer: Timer.TimerPublisher
     private let spriteImage: Image
 
     init(
@@ -16,13 +16,12 @@ struct SpriteAnimationView: View {
         columns: Int = 5,
         rows: Int = 3,
         frameCount: Int = 15,
-        framesPerSecond: Double = 4
+        frameDuration: Double = 0.5
     ) {
         self.columns = columns
         self.rows = rows
         self.frameCount = frameCount
-        self.framesPerSecond = framesPerSecond
-        self.timer = Timer.publish(every: 1.0 / framesPerSecond, on: .main, in: .common)
+        self.frameDuration = frameDuration
         self.spriteImage = Image(imageName)
     }
 
@@ -30,22 +29,32 @@ struct SpriteAnimationView: View {
         GeometryReader { geometry in
             let frameWidth = geometry.size.width
             let frameHeight = geometry.size.height
+            let inset: CGFloat = 4
 
             spriteImage
                 .resizable()
-                .scaledToFill()
+                .interpolation(.high)
                 .frame(
-                    width: frameWidth * CGFloat(columns),
-                    height: frameHeight * CGFloat(rows)
+                    width: (frameWidth + inset * 2) * CGFloat(columns),
+                    height: (frameHeight + inset * 2) * CGFloat(rows)
                 )
                 .offset(
-                    x: -CGFloat(currentFrame % columns) * frameWidth,
-                    y: -CGFloat(currentFrame / columns) * frameHeight
+                    x: -CGFloat(currentFrame % columns) * (frameWidth + inset * 2) + inset,
+                    y: -CGFloat(currentFrame / columns) * (frameHeight + inset * 2) + inset
                 )
         }
         .clipped()
-        .onReceive(timer.autoconnect()) { _ in
-            withAnimation(.none) {
+        .onAppear {
+            startAnimation()
+        }
+        .onDisappear {
+            timer?.invalidate()
+        }
+    }
+
+    private func startAnimation() {
+        timer = Timer.scheduledTimer(withTimeInterval: frameDuration, repeats: true) { _ in
+            withAnimation(.easeInOut(duration: 0.15)) {
                 currentFrame = (currentFrame + 1) % frameCount
             }
         }
@@ -53,16 +62,37 @@ struct SpriteAnimationView: View {
 }
 
 struct RobotCharacterView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
-        SpriteAnimationView(
-            imageName: "RobotSprite",
-            columns: 5,
-            rows: 3,
-            frameCount: 15,
-            framesPerSecond: 3
-        )
-        .frame(width: 120, height: 100)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        ZStack {
+            SpriteAnimationView(
+                imageName: "RobotSprite",
+                columns: 5,
+                rows: 3,
+                frameCount: 15,
+                frameDuration: 0.6
+            )
+            .frame(width: 140, height: 110)
+
+            // Gradient overlay to blend edges into background
+            Rectangle()
+                .fill(
+                    RadialGradient(
+                        gradient: Gradient(colors: [
+                            .clear,
+                            .clear,
+                            Theme.Colors.background.opacity(0.3),
+                            Theme.Colors.background
+                        ]),
+                        center: .center,
+                        startRadius: 40,
+                        endRadius: 80
+                    )
+                )
+                .frame(width: 160, height: 130)
+                .allowsHitTesting(false)
+        }
     }
 }
 
@@ -72,4 +102,6 @@ struct RobotCharacterView: View {
         Text("Legal Advisor")
             .font(.title)
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(Theme.Colors.background)
 }
