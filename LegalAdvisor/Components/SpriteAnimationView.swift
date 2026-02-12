@@ -49,7 +49,7 @@ struct RobotCharacterView: View {
 
         let pixels = pixelBuffer.bindMemory(to: UInt8.self, capacity: width * height * bytesPerPixel)
 
-        // Remove white/near-white/light grey background
+        // Remove white/near-white/light grey background - very aggressive threshold
         for y in 0..<height {
             for x in 0..<width {
                 let offset = (y * width + x) * bytesPerPixel
@@ -57,11 +57,16 @@ struct RobotCharacterView: View {
                 let g = pixels[offset + 1]
                 let b = pixels[offset + 2]
 
-                // Check if pixel is white, near-white, or light grey (background)
-                // Using lower threshold to catch more background
-                let isLight = r >= 225 && g >= 225 && b >= 225
+                // Very aggressive: remove anything that looks like background
+                // Check if pixel is light (background) or near-white
+                let isLight = r >= 180 && g >= 180 && b >= 180
 
-                if isLight {
+                // Also check if it's a grey tone (R≈G≈B)
+                let maxChannel = max(r, max(g, b))
+                let minChannel = min(r, min(g, b))
+                let isGrey = (maxChannel - minChannel) < 30 && r >= 150
+
+                if isLight || isGrey {
                     pixels[offset + 3] = 0 // Make transparent
                 }
             }
@@ -80,7 +85,7 @@ struct RobotCharacterView: View {
             let g = pixels[offset + 1]
             let b = pixels[offset + 2]
             // If corner pixel is light-ish, make it transparent
-            if r >= 200 && g >= 200 && b >= 200 {
+            if r >= 150 && g >= 150 && b >= 150 {
                 pixels[offset + 3] = 0
             }
         }
@@ -95,7 +100,7 @@ struct RobotCharacterView: View {
                 let b = pixels[offset + 2]
 
                 // If this pixel is opaque and light-ish
-                if alpha > 0 && r >= 210 && g >= 210 && b >= 210 {
+                if alpha > 0 && r >= 160 && g >= 160 && b >= 160 {
                     var transparentNeighbors = 0
                     for dy in -1...1 {
                         for dx in -1...1 {
@@ -113,8 +118,8 @@ struct RobotCharacterView: View {
             }
         }
 
-        // Run edge cleanup multiple times to erode the border
-        for _ in 0..<3 {
+        // Run edge cleanup multiple times to erode the border - more passes
+        for _ in 0..<8 {
             for y in 1..<(height - 1) {
                 for x in 1..<(width - 1) {
                     let offset = (y * width + x) * bytesPerPixel
@@ -123,7 +128,8 @@ struct RobotCharacterView: View {
                     let g = pixels[offset + 1]
                     let b = pixels[offset + 2]
 
-                    if alpha > 0 && r >= 200 && g >= 200 && b >= 200 {
+                    // More aggressive threshold for erosion
+                    if alpha > 0 && r >= 140 && g >= 140 && b >= 140 {
                         var transparentNeighbors = 0
                         for dy in -1...1 {
                             for dx in -1...1 {
