@@ -1,0 +1,16 @@
+{
+  "source": "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Views/CrimeListView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld Offenses",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 54
+        }
+      }
+    ]
+  },
+  "version": 1
+}

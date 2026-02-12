@@ -1,0 +1,32 @@
+{
+  "source": "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Views/HomeView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Legal Advisor",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "Canadian Criminal Law Reference",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld Results",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 75
+        }
+      }
+    ]
+  },
+  "version": 1
+}

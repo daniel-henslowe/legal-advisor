@@ -1,0 +1,40 @@
+{
+  "source": "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Views/DisclaimerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Important Legal Disclaimer",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 17
+        }
+      },
+      {
+        "comment": "",
+        "key": "Data Version: %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Updated: %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "I Understand",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 64
+        }
+      }
+    ]
+  },
+  "version": 1
+}

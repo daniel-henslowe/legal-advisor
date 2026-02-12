@@ -1,0 +1,24 @@
+{
+  "source": "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/JurisdictionPicker.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Jurisdiction",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Jurisdiction",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 18
+        }
+      }
+    ]
+  },
+  "version": 1
+}

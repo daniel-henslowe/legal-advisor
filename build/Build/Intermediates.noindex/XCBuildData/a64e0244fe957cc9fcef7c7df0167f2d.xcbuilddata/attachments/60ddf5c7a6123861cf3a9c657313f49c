@@ -1,0 +1,188 @@
+{
+  "" : {
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisor-master.dia",
+    "emit-module-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisor-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisor-master-emit-module.dia",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisor-master.swiftdeps"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/CategoryCard.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CategoryCard~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/CrimeRow.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeRow~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/GlowingCard.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GlowingCard~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/JurisdictionPicker.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/JurisdictionPicker~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/PressableCard.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/PressableCard~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Components/SearchBar.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SearchBar~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/ContentView.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/LegalAdvisorApp.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/LegalAdvisorApp~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Models/Crime.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Crime~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Models/CrimeCategory.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeCategory~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Models/Jurisdiction.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Jurisdiction~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Services/CrimeDatabase.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDatabase~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Services/SentenceCalculator.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/SentenceCalculator~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Theme/Theme.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/Theme~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Views/CrimeDetailView.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeDetailView~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Views/CrimeListView.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/CrimeListView~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/LegalAdvisor/Views/HomeView.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/HomeView~partial.swiftmodule"
+  },
+  "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/danielhenslowe/dev/legal-advisor/build/Build/Intermediates.noindex/LegalAdvisor.build/Debug-iphonesimulator/LegalAdvisor.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

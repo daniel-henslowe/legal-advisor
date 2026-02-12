@@ -10,10 +10,94 @@ struct Crime: Identifiable, Hashable {
     let maximumSentence: Sentence
     let youthModifier: YouthModifier?
     let notes: String?
+    let statute: Statute
+    let canliiURL: String?
 
     var formattedSection: String {
-        "Section \(section)"
+        switch statute {
+        case .criminalCode:
+            return "CC s. \(section)"
+        case .cdsa:
+            return "CDSA s. \(section)"
+        case .cannabisAct:
+            return "Cannabis Act s. \(section)"
+        case .firearmsAct:
+            return "Firearms Act s. \(section)"
+        case .youthCriminalJusticeAct:
+            return "YCJA s. \(section)"
+        case .immigrationAct:
+            return "IRPA s. \(section)"
+        case .customsAct:
+            return "Customs Act s. \(section)"
+        case .competitionAct:
+            return "Competition Act s. \(section)"
+        case .incomeTexAct:
+            return "ITA s. \(section)"
+        case .copyrightAct:
+            return "Copyright Act s. \(section)"
+        case .trademarkAct:
+            return "Trademarks Act s. \(section)"
+        case .environmentalProtectionAct:
+            return "CEPA s. \(section)"
+        case .fisheriesAct:
+            return "Fisheries Act s. \(section)"
+        case .speciesAtRiskAct:
+            return "SARA s. \(section)"
+        case .wildlifeAct:
+            return "Wild Animal Act s. \(section)"
+        case .explosivesAct:
+            return "Explosives Act s. \(section)"
+        case .securityOfInfoAct:
+            return "SOIA s. \(section)"
+        case .proceedsOfCrimeAct:
+            return "PCMLTFA s. \(section)"
+        }
     }
+
+    init(
+        name: String,
+        section: String,
+        category: CrimeCategory,
+        description: String,
+        minimumSentence: Sentence?,
+        maximumSentence: Sentence,
+        youthModifier: YouthModifier?,
+        notes: String?,
+        statute: Statute = .criminalCode,
+        canliiURL: String? = nil
+    ) {
+        self.name = name
+        self.section = section
+        self.category = category
+        self.description = description
+        self.minimumSentence = minimumSentence
+        self.maximumSentence = maximumSentence
+        self.youthModifier = youthModifier
+        self.notes = notes
+        self.statute = statute
+        self.canliiURL = canliiURL
+    }
+}
+
+enum Statute: String, Hashable {
+    case criminalCode = "Criminal Code"
+    case cdsa = "Controlled Drugs and Substances Act"
+    case cannabisAct = "Cannabis Act"
+    case firearmsAct = "Firearms Act"
+    case youthCriminalJusticeAct = "Youth Criminal Justice Act"
+    case immigrationAct = "Immigration and Refugee Protection Act"
+    case customsAct = "Customs Act"
+    case competitionAct = "Competition Act"
+    case incomeTexAct = "Income Tax Act"
+    case copyrightAct = "Copyright Act"
+    case trademarkAct = "Trademarks Act"
+    case environmentalProtectionAct = "Canadian Environmental Protection Act"
+    case fisheriesAct = "Fisheries Act"
+    case speciesAtRiskAct = "Species at Risk Act"
+    case wildlifeAct = "Wild Animal and Plant Protection Act"
+    case explosivesAct = "Explosives Act"
+    case securityOfInfoAct = "Security of Information Act"
+    case proceedsOfCrimeAct = "Proceeds of Crime Act"
 }
 
 struct Sentence: Hashable {
@@ -38,7 +122,28 @@ struct Sentence: Hashable {
             return "\(value) \(unitStr) probation"
         case .suspended:
             return "Suspended sentence"
+        case .summaryMax:
+            return "2 years less a day"
         }
+    }
+
+    static let life = Sentence(value: 0, unit: .years, type: .lifeImprisonment)
+    static let summaryMax = Sentence(value: 2, unit: .years, type: .summaryMax)
+
+    static func years(_ value: Int) -> Sentence {
+        Sentence(value: value, unit: .years, type: .imprisonment)
+    }
+
+    static func months(_ value: Int) -> Sentence {
+        Sentence(value: value, unit: .months, type: .imprisonment)
+    }
+
+    static func days(_ value: Int) -> Sentence {
+        Sentence(value: value, unit: .days, type: .imprisonment)
+    }
+
+    static func fine(_ value: Int) -> Sentence {
+        Sentence(value: value, unit: .days, type: .fine)
     }
 }
 
@@ -72,6 +177,7 @@ enum SentenceType: Hashable {
     case absoluteDischarge
     case probation
     case suspended
+    case summaryMax
 }
 
 struct YouthModifier: Hashable {
@@ -79,4 +185,32 @@ struct YouthModifier: Hashable {
     let minAge: Int
     let maxAge: Int
     let notes: String?
+
+    static let standard = YouthModifier(
+        maxYouthSentence: .years(3),
+        minAge: 12,
+        maxAge: 17,
+        notes: nil
+    )
+
+    static let murder = YouthModifier(
+        maxYouthSentence: .years(10),
+        minAge: 12,
+        maxAge: 17,
+        notes: "Maximum 6 years custody, 4 years supervision for youth 14-17. Younger youth: 4 years custody, 3 years supervision."
+    )
+
+    static let serious = YouthModifier(
+        maxYouthSentence: .years(3),
+        minAge: 12,
+        maxAge: 17,
+        notes: "Intensive rehabilitative custody and supervision may apply."
+    )
+
+    static let minor = YouthModifier(
+        maxYouthSentence: .years(2),
+        minAge: 12,
+        maxAge: 17,
+        notes: "Often results in extrajudicial measures or sanctions for first-time offenders."
+    )
 }

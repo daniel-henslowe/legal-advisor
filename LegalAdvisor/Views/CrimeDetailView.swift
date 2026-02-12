@@ -5,7 +5,6 @@ struct CrimeDetailView: View {
     let jurisdiction: Jurisdiction
 
     @State private var age: Double = 25
-    @State private var showingAgeSlider = false
 
     private var sentenceResult: SentenceResult {
         SentenceCalculator.calculateSentence(for: crime, age: Int(age), jurisdiction: jurisdiction)
@@ -25,6 +24,7 @@ struct CrimeDetailView: View {
                 if !sentenceResult.notes.isEmpty {
                     notesCard
                 }
+                sourceCard
                 disclaimerCard
             }
             .padding()
@@ -162,15 +162,28 @@ struct CrimeDetailView: View {
                     .font(Theme.Fonts.roundedHeadline())
                     .foregroundColor(.primary)
 
+                detailRow(title: "Statute", value: crime.statute.rawValue)
+                detailRow(title: "Section", value: crime.section)
                 detailRow(title: "Jurisdiction", value: jurisdiction.rawValue)
-                detailRow(title: "Criminal Code Section", value: crime.section)
-                detailRow(title: "Offense Type", value: crime.maximumSentence.type == .lifeImprisonment ? "Indictable" : "Hybrid")
+                detailRow(title: "Offense Type", value: offenseType)
 
                 if let min = crime.minimumSentence {
                     detailRow(title: "Mandatory Minimum", value: min.formatted)
                 }
+
+                detailRow(title: "Maximum Penalty", value: crime.maximumSentence.formatted)
             }
             .padding()
+        }
+    }
+
+    private var offenseType: String {
+        if crime.maximumSentence.type == .lifeImprisonment {
+            return "Indictable"
+        } else if crime.maximumSentence.value <= 2 && crime.maximumSentence.unit == .years {
+            return "Summary / Hybrid"
+        } else {
+            return "Hybrid"
         }
     }
 
@@ -203,12 +216,53 @@ struct CrimeDetailView: View {
         }
     }
 
+    private var sourceCard: some View {
+        GlowingCard(color: .blue) {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Image(systemName: "book.closed.fill")
+                        .foregroundColor(.blue)
+
+                    Text("Source")
+                        .font(Theme.Fonts.roundedHeadline())
+                        .foregroundColor(.primary)
+                }
+
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(crime.statute.rawValue)
+                        .font(Theme.Fonts.roundedSubheadline())
+                        .foregroundColor(.primary)
+
+                    Text("Data Version: \(CrimeDatabase.shared.dataVersion)")
+                        .font(Theme.Fonts.roundedCaption())
+                        .foregroundColor(.secondary)
+
+                    Text("Last Updated: \(CrimeDatabase.shared.lastUpdated)")
+                        .font(Theme.Fonts.roundedCaption())
+                        .foregroundColor(.secondary)
+                }
+
+                if let url = crime.canliiURL {
+                    Link(destination: URL(string: url)!) {
+                        HStack {
+                            Image(systemName: "link")
+                            Text("View on CanLII")
+                        }
+                        .font(Theme.Fonts.roundedCaption())
+                        .foregroundColor(.blue)
+                    }
+                }
+            }
+            .padding()
+        }
+    }
+
     private var disclaimerCard: some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "exclamationmark.triangle.fill")
                 .foregroundColor(.red)
 
-            Text("This information is for educational purposes only and does not constitute legal advice. Always consult a qualified lawyer for legal matters.")
+            Text("This information is for educational purposes only and does not constitute legal advice. Consult a qualified lawyer for legal matters.")
                 .font(Theme.Fonts.roundedCaption())
                 .foregroundColor(.secondary)
         }
@@ -228,6 +282,7 @@ struct CrimeDetailView: View {
             Text(value)
                 .font(Theme.Fonts.roundedSubheadline())
                 .foregroundColor(.primary)
+                .multilineTextAlignment(.trailing)
         }
     }
 }
