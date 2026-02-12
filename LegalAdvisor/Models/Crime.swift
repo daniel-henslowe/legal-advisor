@@ -98,6 +98,50 @@ enum Statute: String, Hashable {
     case explosivesAct = "Explosives Act"
     case securityOfInfoAct = "Security of Information Act"
     case proceedsOfCrimeAct = "Proceeds of Crime Act"
+
+    var url: URL? {
+        let baseURL = "https://laws-lois.justice.gc.ca/eng/acts/"
+        let urlString: String
+        switch self {
+        case .criminalCode:
+            urlString = baseURL + "C-46"
+        case .cdsa:
+            urlString = baseURL + "C-38.8"
+        case .cannabisAct:
+            urlString = baseURL + "C-24.5"
+        case .firearmsAct:
+            urlString = baseURL + "F-11.6"
+        case .youthCriminalJusticeAct:
+            urlString = baseURL + "Y-1.5"
+        case .immigrationAct:
+            urlString = baseURL + "I-2.5"
+        case .customsAct:
+            urlString = baseURL + "C-52.6"
+        case .competitionAct:
+            urlString = baseURL + "C-34"
+        case .incomeTexAct:
+            urlString = baseURL + "I-3.3"
+        case .copyrightAct:
+            urlString = baseURL + "C-42"
+        case .trademarkAct:
+            urlString = baseURL + "T-13"
+        case .environmentalProtectionAct:
+            urlString = baseURL + "C-15.31"
+        case .fisheriesAct:
+            urlString = baseURL + "F-14"
+        case .speciesAtRiskAct:
+            urlString = baseURL + "S-15.3"
+        case .wildlifeAct:
+            urlString = baseURL + "W-8.5"
+        case .explosivesAct:
+            urlString = baseURL + "E-17"
+        case .securityOfInfoAct:
+            urlString = baseURL + "O-5"
+        case .proceedsOfCrimeAct:
+            urlString = baseURL + "P-24.501"
+        }
+        return URL(string: urlString)
+    }
 }
 
 struct Sentence: Hashable {

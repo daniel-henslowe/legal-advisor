@@ -217,44 +217,55 @@ struct CrimeDetailView: View {
     }
 
     private var sourceCard: some View {
-        GlowingCard(color: .blue) {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack {
-                    Image(systemName: "book.closed.fill")
-                        .foregroundColor(.blue)
+        Button {
+            if let url = crime.statute.url {
+                UIApplication.shared.open(url)
+            }
+        } label: {
+            PressableCard {
+                GlowingCard(color: .blue) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Image(systemName: "book.closed.fill")
+                                .foregroundColor(.blue)
 
-                    Text("Source")
-                        .font(Theme.Fonts.roundedHeadline())
-                        .foregroundColor(.primary)
-                }
+                            Text("Source")
+                                .font(Theme.Fonts.roundedHeadline())
+                                .foregroundColor(.primary)
 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(crime.statute.rawValue)
-                        .font(Theme.Fonts.roundedSubheadline())
-                        .foregroundColor(.primary)
+                            Spacer()
 
-                    Text("Data Version: \(CrimeDatabase.shared.dataVersion)")
-                        .font(Theme.Fonts.roundedCaption())
-                        .foregroundColor(.secondary)
+                            Image(systemName: "arrow.up.right.square")
+                                .font(.system(size: 16))
+                                .foregroundColor(.blue)
+                        }
 
-                    Text("Last Updated: \(CrimeDatabase.shared.lastUpdated)")
-                        .font(Theme.Fonts.roundedCaption())
-                        .foregroundColor(.secondary)
-                }
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(crime.statute.rawValue)
+                                .font(Theme.Fonts.roundedSubheadline())
+                                .foregroundColor(.primary)
 
-                if let url = crime.canliiURL {
-                    Link(destination: URL(string: url)!) {
+                            Text("Data Version: \(CrimeDatabase.shared.dataVersion)")
+                                .font(Theme.Fonts.roundedCaption())
+                                .foregroundColor(.secondary)
+
+                            Text("Last Updated: \(CrimeDatabase.shared.lastUpdated)")
+                                .font(Theme.Fonts.roundedCaption())
+                                .foregroundColor(.secondary)
+                        }
+
                         HStack {
                             Image(systemName: "link")
-                            Text("View on CanLII")
+                            Text("View Full Act on Justice Laws")
                         }
                         .font(Theme.Fonts.roundedCaption())
                         .foregroundColor(.blue)
                     }
+                    .padding()
                 }
             }
-            .padding()
         }
+        .buttonStyle(PlainButtonStyle())
     }
 
     private var disclaimerCard: some View {
