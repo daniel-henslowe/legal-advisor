@@ -62,37 +62,15 @@ struct SpriteAnimationView: View {
 }
 
 struct RobotCharacterView: View {
-    @Environment(\.colorScheme) var colorScheme
-
     var body: some View {
-        ZStack {
-            SpriteAnimationView(
-                imageName: "RobotSprite",
-                columns: 5,
-                rows: 3,
-                frameCount: 15,
-                frameDuration: 0.6
-            )
-            .frame(width: 140, height: 110)
-
-            // Gradient overlay to blend edges into background
-            Rectangle()
-                .fill(
-                    RadialGradient(
-                        gradient: Gradient(colors: [
-                            .clear,
-                            .clear,
-                            Theme.Colors.background.opacity(0.3),
-                            Theme.Colors.background
-                        ]),
-                        center: .center,
-                        startRadius: 40,
-                        endRadius: 80
-                    )
-                )
-                .frame(width: 160, height: 130)
-                .allowsHitTesting(false)
-        }
+        SpriteAnimationView(
+            imageName: "RobotSprite",
+            columns: 5,
+            rows: 3,
+            frameCount: 15,
+            frameDuration: 0.5
+        )
+        .frame(width: 130, height: 110)
     }
 }
 
