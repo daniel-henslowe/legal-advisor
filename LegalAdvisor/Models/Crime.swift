@@ -54,6 +54,18 @@ struct Crime: Identifiable, Hashable {
         }
     }
 
+    var sectionURL: URL? {
+        guard let baseURL = statute.actCode else { return statute.url }
+
+        // Extract the base section number (e.g., "235" from "235(1)" or "320.14" from "320.14(1)(a)")
+        let sectionNumber = section
+            .components(separatedBy: "(").first?
+            .trimmingCharacters(in: .whitespaces) ?? section
+
+        let urlString = "https://laws-lois.justice.gc.ca/eng/acts/\(baseURL)/section-\(sectionNumber).html"
+        return URL(string: urlString)
+    }
+
     init(
         name: String,
         section: String,
@@ -99,48 +111,32 @@ enum Statute: String, Hashable {
     case securityOfInfoAct = "Security of Information Act"
     case proceedsOfCrimeAct = "Proceeds of Crime Act"
 
-    var url: URL? {
-        let baseURL = "https://laws-lois.justice.gc.ca/eng/acts/"
-        let urlString: String
+    var actCode: String? {
         switch self {
-        case .criminalCode:
-            urlString = baseURL + "C-46"
-        case .cdsa:
-            urlString = baseURL + "C-38.8"
-        case .cannabisAct:
-            urlString = baseURL + "C-24.5"
-        case .firearmsAct:
-            urlString = baseURL + "F-11.6"
-        case .youthCriminalJusticeAct:
-            urlString = baseURL + "Y-1.5"
-        case .immigrationAct:
-            urlString = baseURL + "I-2.5"
-        case .customsAct:
-            urlString = baseURL + "C-52.6"
-        case .competitionAct:
-            urlString = baseURL + "C-34"
-        case .incomeTexAct:
-            urlString = baseURL + "I-3.3"
-        case .copyrightAct:
-            urlString = baseURL + "C-42"
-        case .trademarkAct:
-            urlString = baseURL + "T-13"
-        case .environmentalProtectionAct:
-            urlString = baseURL + "C-15.31"
-        case .fisheriesAct:
-            urlString = baseURL + "F-14"
-        case .speciesAtRiskAct:
-            urlString = baseURL + "S-15.3"
-        case .wildlifeAct:
-            urlString = baseURL + "W-8.5"
-        case .explosivesAct:
-            urlString = baseURL + "E-17"
-        case .securityOfInfoAct:
-            urlString = baseURL + "O-5"
-        case .proceedsOfCrimeAct:
-            urlString = baseURL + "P-24.501"
+        case .criminalCode: return "C-46"
+        case .cdsa: return "C-38.8"
+        case .cannabisAct: return "C-24.5"
+        case .firearmsAct: return "F-11.6"
+        case .youthCriminalJusticeAct: return "Y-1.5"
+        case .immigrationAct: return "I-2.5"
+        case .customsAct: return "C-52.6"
+        case .competitionAct: return "C-34"
+        case .incomeTexAct: return "I-3.3"
+        case .copyrightAct: return "C-42"
+        case .trademarkAct: return "T-13"
+        case .environmentalProtectionAct: return "C-15.31"
+        case .fisheriesAct: return "F-14"
+        case .speciesAtRiskAct: return "S-15.3"
+        case .wildlifeAct: return "W-8.5"
+        case .explosivesAct: return "E-17"
+        case .securityOfInfoAct: return "O-5"
+        case .proceedsOfCrimeAct: return "P-24.501"
         }
-        return URL(string: urlString)
+    }
+
+    var url: URL? {
+        guard let code = actCode else { return nil }
+        return URL(string: "https://laws-lois.justice.gc.ca/eng/acts/\(code)")
     }
 }
 

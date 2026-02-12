@@ -218,7 +218,7 @@ struct CrimeDetailView: View {
 
     private var sourceCard: some View {
         Button {
-            if let url = crime.statute.url {
+            if let url = crime.sectionURL {
                 UIApplication.shared.open(url)
             }
         } label: {
@@ -256,7 +256,7 @@ struct CrimeDetailView: View {
 
                         HStack {
                             Image(systemName: "link")
-                            Text("View Full Act on Justice Laws")
+                            Text("View Section \(crime.section.components(separatedBy: "(").first ?? crime.section) on Justice Laws")
                         }
                         .font(Theme.Fonts.roundedCaption())
                         .foregroundColor(.blue)
