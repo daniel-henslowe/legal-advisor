@@ -49,7 +49,7 @@ struct RobotCharacterView: View {
 
         let pixels = pixelBuffer.bindMemory(to: UInt8.self, capacity: width * height * bytesPerPixel)
 
-        // Remove white/near-white background
+        // Remove white/near-white/light grey background
         for y in 0..<height {
             for x in 0..<width {
                 let offset = (y * width + x) * bytesPerPixel
@@ -57,8 +57,9 @@ struct RobotCharacterView: View {
                 let g = pixels[offset + 1]
                 let b = pixels[offset + 2]
 
-                // Check if pixel is white or very light (background)
-                let isLight = r >= 240 && g >= 240 && b >= 240
+                // Check if pixel is white, near-white, or light grey (background)
+                // Using lower threshold to catch more background
+                let isLight = r >= 225 && g >= 225 && b >= 225
 
                 if isLight {
                     pixels[offset + 3] = 0 // Make transparent
@@ -66,14 +67,35 @@ struct RobotCharacterView: View {
             }
         }
 
-        // Second pass: soften edges by checking neighbors
+        // Third pass: flood fill from corners to remove any remaining background
+        // Check corners - they should be background
+        let cornerPositions = [
+            (0, 0), (width - 1, 0), (0, height - 1), (width - 1, height - 1),
+            (width / 2, 0), (0, height / 2), (width - 1, height / 2), (width / 2, height - 1)
+        ]
+
+        for (startX, startY) in cornerPositions {
+            let offset = (startY * width + startX) * bytesPerPixel
+            let r = pixels[offset]
+            let g = pixels[offset + 1]
+            let b = pixels[offset + 2]
+            // If corner pixel is light-ish, make it transparent
+            if r >= 200 && g >= 200 && b >= 200 {
+                pixels[offset + 3] = 0
+            }
+        }
+
+        // Second pass: remove light pixels that border transparent pixels
         for y in 1..<(height - 1) {
             for x in 1..<(width - 1) {
                 let offset = (y * width + x) * bytesPerPixel
                 let alpha = pixels[offset + 3]
+                let r = pixels[offset]
+                let g = pixels[offset + 1]
+                let b = pixels[offset + 2]
 
-                // If this pixel is opaque, check if it's on the edge of transparent area
-                if alpha > 0 {
+                // If this pixel is opaque and light-ish
+                if alpha > 0 && r >= 210 && g >= 210 && b >= 210 {
                     var transparentNeighbors = 0
                     for dy in -1...1 {
                         for dx in -1...1 {
@@ -83,14 +105,36 @@ struct RobotCharacterView: View {
                             }
                         }
                     }
-                    // Soften edge pixels
-                    if transparentNeighbors >= 3 {
-                        let r = pixels[offset]
-                        let g = pixels[offset + 1]
-                        let b = pixels[offset + 2]
-                        // If it's a light colored edge pixel, make it semi-transparent
-                        if r >= 200 && g >= 200 && b >= 200 {
-                            pixels[offset + 3] = UInt8(max(0, Int(alpha) - 100))
+                    // If touching transparent area, make this transparent too
+                    if transparentNeighbors >= 2 {
+                        pixels[offset + 3] = 0
+                    }
+                }
+            }
+        }
+
+        // Run edge cleanup multiple times to erode the border
+        for _ in 0..<3 {
+            for y in 1..<(height - 1) {
+                for x in 1..<(width - 1) {
+                    let offset = (y * width + x) * bytesPerPixel
+                    let alpha = pixels[offset + 3]
+                    let r = pixels[offset]
+                    let g = pixels[offset + 1]
+                    let b = pixels[offset + 2]
+
+                    if alpha > 0 && r >= 200 && g >= 200 && b >= 200 {
+                        var transparentNeighbors = 0
+                        for dy in -1...1 {
+                            for dx in -1...1 {
+                                let nOffset = ((y + dy) * width + (x + dx)) * bytesPerPixel
+                                if pixels[nOffset + 3] == 0 {
+                                    transparentNeighbors += 1
+                                }
+                            }
+                        }
+                        if transparentNeighbors >= 1 {
+                            pixels[offset + 3] = 0
                         }
                     }
                 }
