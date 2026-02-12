@@ -33,17 +33,9 @@ struct HomeView: View {
     }
 
     private var headerSection: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "scale.3d")
-                .font(.system(size: 48))
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [.blue, .purple],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .glowEffect(color: .blue, radius: 15)
+        VStack(spacing: 12) {
+            RobotCharacterView()
+                .shadow(color: .blue.opacity(0.3), radius: 10, x: 0, y: 5)
 
             Text("Legal Advisor")
                 .font(Theme.Fonts.roundedTitle())
