@@ -2,8 +2,6 @@
 
 A comprehensive iOS app for Canadian criminal law reference. Browse offenses by category, view sentencing guidelines based on age and jurisdiction, and access official legislation sources.
 
-![Home Screen](screenshots/home.png)
-
 ## Features
 
 - **200+ Criminal Offenses** - Comprehensive database covering the Criminal Code, CDSA, Cannabis Act, Firearms Act, and more
